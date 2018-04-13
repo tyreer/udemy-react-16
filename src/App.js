@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import Radium, { StyleRoot } from 'radium';
 import Person from './Person/Person';
 
 class App extends Component {
@@ -56,10 +55,10 @@ class App extends Component {
 
     const style = {
       color: 'green',
-      ':hover': {
-        background: 'green',
-        color: 'white',
-      },
+      // ':hover': {
+      //   background: 'green',
+      //   color: 'white',
+      // },
     }
 
     const divClassName = ['App'];
@@ -81,21 +80,19 @@ class App extends Component {
       );
 
       style.color = 'red';
-      style[':hover'] = {
-        background: 'red',
-        color: 'white',
-      }
+      // style[':hover'] = {
+      //   background: 'red',
+      //   color: 'white',
+      // }
 
       divClassName.push('App--is-expanded');
     }
 
     return (
-      <StyleRoot>
-        <div className={divClassName.join(' ')}>
-          <button style= {style} onClick={this.togglePeople}>Switch Name</button>
-          {people}
-        </div>
-      </StyleRoot>
+      <div className={divClassName.join(' ')}>
+        <button style= {style} onClick={this.togglePeople}>Switch Name</button>
+        {people}
+      </div>
     );
   }
 }
@@ -122,4 +119,4 @@ class App extends Component {
 //   </div>
 // }
 
-export default Radium(App);
+export default App;
