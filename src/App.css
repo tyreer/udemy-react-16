@@ -1,0 +1,8 @@
+.App {
+  text-align: center;
+  transition: all .5s;
+}
+
+.App--is-expanded {
+  padding-top: 30px;
+}
